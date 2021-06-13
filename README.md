@@ -1,5 +1,7 @@
 # 1_projeto_cli
 
+Estudos com VueJs 3.
+
 ## Project setup
 ```
 npm install
