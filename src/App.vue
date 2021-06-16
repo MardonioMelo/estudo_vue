@@ -4,13 +4,12 @@
     <PrimeiroCompenente />    
     <LifeCycle />
     <Pessoa />
-    <p class="paragrafo-pai">O dado de app é: {{testando}}</p>
-    <router-view></router-view>
+    <p class="paragrafo-pai">O dado de app é: {{testando}}</p>  
   </div>
 </template>
 
 <script>
-import MenuItem from "./components/MenuItem.vue";
+
 import PrimeiroCompenente from "./components/PrimeiroComponente.vue";
 import LifeCycle from "./components/LifeCycle.vue";
 import Pessoa from "./components/PessoaItem.vue";
@@ -23,7 +22,7 @@ export default {
     LifeCycle,
     Pessoa,
     HeaderItem,
-    MenuItem
+   
   },
   data() {
     return {
