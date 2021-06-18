@@ -10,7 +10,9 @@
     </ul>
     <p>Utilizo as seguintes tecnologias para front-end:</p>
     <ul>
-      <li v-for="item in frontend_tecnologias" :key="item.id">{{item.language}}</li>
+      <li v-for="item in frontend_tecnologias" :key="item.id">
+        {{ item.language }}
+      </li>
     </ul>
     <div>
       <button @click="showEmail">Mostre e-mail</button>
@@ -28,13 +30,17 @@
 <script>
 import PictureItem from "./PictureItem.vue";
 export default {
-  components: { PictureItem },
   name: "InfoItem",
+  components: {
+    PictureItem,
+  },
+  props: {
+    email: String,
+    esta_trabalhando: Boolean,
+  },
   data() {
     return {
-      esta_trabalhando: false,
       mostrar_email: false,
-      email: "mardonio.quimico@gmail.com",
       meu_link: "https://google.com",
       textoBotao: "Mostrar botão",
       backend_tecnologias: ["JavaScript", "PHP", "Python3"],
