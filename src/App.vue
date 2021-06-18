@@ -21,8 +21,7 @@ export default {
     PrimeiroCompenente,
     LifeCycle,
     Pessoa,
-    HeaderItem,
-   
+    HeaderItem   
   },
   data() {
     return {
