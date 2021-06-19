@@ -1,9 +1,9 @@
 <template>
   <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Projetos</a></li>
-      <li><a href="#">Contato</a></li>
-      <li v-if="esta_logado"><a href="#">Meu Perfil</a></li>
+      <li><router-link to="/">Home</router-link></li>
+      <li><router-link to="/primeiro">Primeiro</router-link></li>
+      <li><router-link to="/life">Life Cycle</router-link></li>
+      <li v-if="esta_logado"><router-link to="/info">Perfil</router-link></li>
   </ul>
 </template>
 

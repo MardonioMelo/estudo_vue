@@ -1,47 +1,51 @@
 <template>
-  <div>    
-    <HeaderItem :esta_logado="true" />
-    <PrimeiroCompenente />    
-    <LifeCycle />
-    <Pessoa />
-    <p class="paragrafo-pai">O dado de app é: {{testando}}</p>  
+  <HeaderItem :esta_logado="true"/>
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/primeiro">Primeiro</router-link> |
+    <router-link to="/life">Life Cycle</router-link> |
+    <router-link to="/pessoa">Pessoa</router-link>    
   </div>
+  <router-view />
 </template>
 
 <script>
-
-import PrimeiroCompenente from "./components/PrimeiroComponente.vue";
-import LifeCycle from "./components/LifeCycle.vue";
-import Pessoa from "./components/PessoaItem.vue";
-import HeaderItem from './components/HeaderItem.vue';
-
+import HeaderItem from "./components/HeaderItem.vue";
 export default {
-  name: "App",
   components: {
-    PrimeiroCompenente,
-    LifeCycle,
-    Pessoa,
-    HeaderItem   
-  },
-  data() {
-    return {
-      testando: "Teste"
-    }
+    HeaderItem,
   },
 };
 </script>
 
 <style>
-  body {
-    background-color: #333;
-    color: #fff;
-  }
+body {
+  background-color: rgb(116, 98, 98);
+  color: #fff;
+}
 
-  a {
-    color: red;
-  }
+.teste {
+  background-color: #000;
+}
 
-  .teste{
-    background-color: #000;
-  }
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
 </style>
